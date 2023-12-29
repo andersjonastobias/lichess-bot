@@ -1,0 +1,746 @@
+2023-12-29 18:28:26,640 __main__ (lichess-bot.py:1026) INFO 
+    .   _/|
+    .  // o\
+    .  || ._)  lichess-bot 2023.12.28.2
+    .  //__\
+    .  )___(   Play on Lichess with a bot
+    
+2023-12-29 18:28:26,680 config (config.py:261) DEBUG Config:
+token: logger
+url: https://lichess.org/
+engine:
+  dir: ./../Chess-Coding-Adventure/Chess-Coding-Adventure/bin/Debug/net6.0
+  name: Chess-Coding-Adventure.exe
+  working_dir: ''
+  protocol: uci
+  ponder: true
+  polyglot:
+    enabled: false
+    book:
+      standard:
+      - engines/book1.bin
+      - engines/book2.bin
+    min_weight: 1
+    selection: weighted_random
+    max_depth: 20
+  draw_or_resign:
+    resign_enabled: false
+    resign_score: -1000
+    resign_for_egtb_minus_two: true
+    resign_moves: 3
+    offer_draw_enabled: true
+    offer_draw_score: 0
+    offer_draw_for_egtb_zero: true
+    offer_draw_moves: 10
+    offer_draw_pieces: 10
+  online_moves:
+    max_out_of_book_moves: 10
+    max_retries: 2
+    chessdb_book:
+      enabled: false
+      min_time: 20
+      move_quality: good
+      min_depth: 20
+    lichess_cloud_analysis:
+      enabled: false
+      min_time: 20
+      move_quality: best
+      max_score_difference: 50
+      min_depth: 20
+      min_knodes: 0
+    lichess_opening_explorer:
+      enabled: false
+      min_time: 20
+      source: masters
+      player_name: ''
+      sort: winrate
+      min_games: 10
+    online_egtb:
+      enabled: false
+      min_time: 20
+      max_pieces: 7
+      source: lichess
+      move_quality: best
+  lichess_bot_tbs:
+    syzygy:
+      enabled: false
+      paths:
+      - engines/syzygy
+      max_pieces: 7
+      move_quality: best
+    gaviota:
+      enabled: false
+      paths:
+      - engines/gaviota
+      max_pieces: 5
+      min_dtm_to_consider_as_wdl_1: 120
+      move_quality: best
+  homemade_options: null
+  silence_stderr: false
+abort_time: 30
+fake_think_time: false
+rate_limiting_delay: 0
+move_overhead: 2000
+correspondence:
+  move_time: 60
+  checkin_period: 300
+  disconnect_time: 150
+  ponder: false
+challenge:
+  concurrency: 1
+  sort_by: best
+  accept_bot: true
+  only_bot: false
+  max_increment: 20
+  min_increment: 0
+  max_base: 1800
+  min_base: 0
+  max_days: 14
+  min_days: 1
+  variants:
+  - standard
+  time_controls:
+  - bullet
+  - blitz
+  - rapid
+  - classical
+  modes:
+  - casual
+  - rated
+  bullet_requires_increment: false
+greeting:
+  hello: Hi! I'm a chess-bot. I wish you good luck with the game.
+  goodbye: Good game!
+  hello_spectators: Hi! I'm {me}. Type !help for a list of commands I can respond
+    to.
+  goodbye_spectators: Thanks for watching!
+matchmaking:
+  allow_matchmaking: false
+  challenge_variant: random
+  challenge_timeout: 30
+  challenge_initial_time:
+  - 60
+  - 180
+  challenge_increment:
+  - 1
+  - 2
+  opponent_rating_difference: 300
+  rating_preference: none
+  opponent_allow_tos_violation: false
+  challenge_mode: random
+  challenge_filter: none
+
+2023-12-29 18:28:26,681 config (config.py:262) DEBUG ====================
+2023-12-29 18:28:26,687 config (config.py:261) DEBUG Config:
+token: logger
+url: https://lichess.org/
+engine:
+  dir: ./../Chess-Coding-Adventure/Chess-Coding-Adventure/bin/Debug/net6.0
+  name: Chess-Coding-Adventure.exe
+  working_dir: C:\src\egne projekter\DotNet projects\lichess-bot
+  protocol: uci
+  ponder: true
+  polyglot:
+    enabled: false
+    book:
+      standard:
+      - engines/book1.bin
+      - engines/book2.bin
+    min_weight: 1
+    selection: weighted_random
+    max_depth: 20
+  draw_or_resign:
+    resign_enabled: false
+    resign_score: -1000
+    resign_for_egtb_minus_two: true
+    resign_moves: 3
+    offer_draw_enabled: true
+    offer_draw_score: 0
+    offer_draw_for_egtb_zero: true
+    offer_draw_moves: 10
+    offer_draw_pieces: 10
+  online_moves:
+    max_out_of_book_moves: 10
+    max_retries: 2
+    chessdb_book:
+      enabled: false
+      min_time: 20
+      move_quality: good
+      min_depth: 20
+    lichess_cloud_analysis:
+      enabled: false
+      min_time: 20
+      move_quality: best
+      max_score_difference: 50
+      min_depth: 20
+      min_knodes: 0
+    lichess_opening_explorer:
+      enabled: false
+      min_time: 20
+      source: masters
+      player_name: ''
+      sort: winrate
+      min_games: 10
+    online_egtb:
+      enabled: false
+      min_time: 20
+      max_pieces: 7
+      source: lichess
+      move_quality: best
+    max_depth: .inf
+  lichess_bot_tbs:
+    syzygy:
+      enabled: false
+      paths:
+      - engines/syzygy
+      max_pieces: 7
+      move_quality: best
+    gaviota:
+      enabled: false
+      paths:
+      - engines/gaviota
+      max_pieces: 5
+      min_dtm_to_consider_as_wdl_1: 120
+      move_quality: best
+  homemade_options: null
+  silence_stderr: false
+  uci_ponder: false
+abort_time: 30
+fake_think_time: false
+rate_limiting_delay: 0
+move_overhead: 2000
+correspondence:
+  move_time: 60
+  checkin_period: 300
+  disconnect_time: 150
+  ponder: false
+  uci_ponder: false
+challenge:
+  concurrency: 1
+  sort_by: best
+  accept_bot: true
+  only_bot: false
+  max_increment: 20
+  min_increment: 0
+  max_base: 1800
+  min_base: 0
+  max_days: 14
+  min_days: 1
+  variants:
+  - standard
+  time_controls:
+  - bullet
+  - blitz
+  - rapid
+  - classical
+  modes:
+  - casual
+  - rated
+  bullet_requires_increment: false
+  block_list: []
+  allow_list: []
+greeting:
+  hello: Hi! I'm a chess-bot. I wish you good luck with the game.
+  goodbye: Good game!
+  hello_spectators: Hi! I'm {me}. Type !help for a list of commands I can respond
+    to.
+  goodbye_spectators: Thanks for watching!
+matchmaking:
+  allow_matchmaking: false
+  challenge_variant: random
+  challenge_timeout: 30
+  challenge_initial_time:
+  - 60
+  - 180
+  challenge_increment:
+  - 1
+  - 2
+  opponent_rating_difference: 300
+  rating_preference: none
+  opponent_allow_tos_violation: false
+  challenge_mode: random
+  challenge_filter: none
+  block_list: []
+  challenge_days:
+  - null
+  opponent_min_rating: 600
+  opponent_max_rating: 4000
+  overrides: {}
+pgn_file_grouping: game
+
+2023-12-29 18:28:26,687 config (config.py:262) DEBUG ====================
+2023-12-29 18:28:26,689 __main__ (lichess-bot.py:1029) INFO Checking engine configuration ...
+2023-12-29 18:28:26,693 engine_wrapper (engine_wrapper.py:67) DEBUG Starting engine: ['C:\\src\\egne projekter\\DotNet projects\\Chess-Coding-Adventure\\Chess-Coding-Adventure\\bin\\Debug\\net6.0\\Chess-Coding-Adventure.exe']
+2023-12-29 18:28:26,693 asyncio (proactor_events.py:630) DEBUG Using proactor: IocpProactor
+2023-12-29 18:28:26,716 chess.engine (engine.py:1040) DEBUG <UciProtocol (pid=21280)>: Connection made
+2023-12-29 18:28:26,716 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=21280)>: << uci
+2023-12-29 18:28:26,878 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=21280)>: >> uciok
+2023-12-29 18:28:26,878 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=21280)>: << isready
+2023-12-29 18:28:26,878 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=21280)>: >> readyok
+2023-12-29 18:28:26,879 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=21280)>: << quit
+2023-12-29 18:28:26,887 chess.engine (engine.py:1059) DEBUG <UciProtocol (pid=21280)>: Process exited
+2023-12-29 18:28:26,887 chess.engine (engine.py:1046) DEBUG <UciProtocol (pid=21280)>: Connection lost (exit code: 0, error: None)
+2023-12-29 18:28:26,888 __main__ (lichess-bot.py:1032) INFO Engine configuration OK
+2023-12-29 18:28:26,893 urllib3.connectionpool (connectionpool.py:1052) DEBUG Starting new HTTPS connection (1): lichess.org:443
+2023-12-29 18:28:27,568 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/token/test HTTP/1.1" 200 None
+2023-12-29 18:28:27,975 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "GET /api/account HTTP/1.1" 200 None
+2023-12-29 18:28:27,976 __main__ (lichess-bot.py:1041) INFO Welcome chessbot1239!
+2023-12-29 18:28:27,979 __main__ (lichess-bot.py:209) INFO You're now connected to https://lichess.org/ and awaiting challenges.
+2023-12-29 18:28:28,879 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "GET /api/account/playing HTTP/1.1" 200 17
+2023-12-29 18:28:52,335 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'challenge', 'challenge': {'id': 'WoBYsIKH', 'url': 'https://lichess.org/WoBYsIKH', 'status': 'created', 'challenger': {'id': 'codic', 'name': 'codic', 'rating': 1370, 'title': None, 'online': True, 'lag': 4}, 'destUser': {'id': 'chessbot1239', 'name': 'chessbot1239', 'rating': 2000, 'title': 'BOT', 'provisional': True, 'online': True}, 'variant': {'key': 'standard', 'name': 'Standard', 'short': 'Std'}, 'rated': False, 'speed': 'blitz', 'timeControl': {'type': 'clock', 'limit': 300, 'increment': 0, 'show': '5+0'}, 'color': 'random', 'finalColor': 'black', 'perf': {'icon': '\ue01d', 'name': 'Blitz'}}, 'compat': {'bot': True, 'board': True}}
+2023-12-29 18:28:52,337 __main__ (lichess-bot.py:424) INFO Accept Blitz casual challenge from codic (1370) (WoBYsIKH)
+2023-12-29 18:28:52,339 urllib3.connectionpool (connectionpool.py:292) DEBUG Resetting dropped connection: lichess.org
+2023-12-29 18:28:53,000 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/challenge/WoBYsIKH/accept HTTP/1.1" 200 11
+2023-12-29 18:28:53,001 __main__ (lichess-bot.py:257) INFO --- Process Queued. Count: 1. IDs: {'WoBYsIKH'}
+2023-12-29 18:28:53,001 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'gameStart', 'game': {'fullId': 'WoBYsIKHOmO2', 'gameId': 'WoBYsIKH', 'fen': 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1', 'color': 'white', 'lastMove': '', 'source': 'friend', 'status': {'id': 20, 'name': 'started'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'blitz', 'perf': 'blitz', 'rated': False, 'hasMoved': False, 'opponent': {'id': 'codic', 'username': 'codic', 'rating': 1370}, 'isMyTurn': True, 'secondsLeft': 300, 'compat': {'bot': True, 'board': True}, 'id': 'WoBYsIKH'}}
+2023-12-29 18:28:53,001 __main__ (lichess-bot.py:257) INFO --- Process Used. Count: 1. IDs: {'WoBYsIKH'}
+2023-12-29 18:28:53,012 urllib3.connectionpool (connectionpool.py:1052) DEBUG Starting new HTTPS connection (1): lichess.org:443
+2023-12-29 18:28:53,646 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "GET /api/bot/game/stream/WoBYsIKH HTTP/1.1" 200 None
+2023-12-29 18:28:53,647 __mp_main__ (lichess-bot.py:575) DEBUG Initial state: {'id': 'WoBYsIKH', 'variant': {'key': 'standard', 'name': 'Standard', 'short': 'Std'}, 'speed': 'blitz', 'perf': {'name': 'Blitz'}, 'rated': False, 'createdAt': 1703870933119, 'white': {'id': 'chessbot1239', 'name': 'chessbot1239', 'title': 'BOT', 'rating': 2000, 'provisional': True}, 'black': {'id': 'codic', 'name': 'codic', 'title': None, 'rating': 1370}, 'initialFen': 'startpos', 'clock': {'initial': 300000, 'increment': 0}, 'type': 'gameFull', 'state': {'type': 'gameState', 'moves': '', 'wtime': 300000, 'btime': 300000, 'winc': 0, 'binc': 0, 'status': 'started'}}
+2023-12-29 18:28:53,648 engine_wrapper (engine_wrapper.py:67) DEBUG Starting engine: ['C:\\src\\egne projekter\\DotNet projects\\Chess-Coding-Adventure\\Chess-Coding-Adventure\\bin\\Debug\\net6.0\\Chess-Coding-Adventure.exe']
+2023-12-29 18:28:53,649 asyncio (proactor_events.py:630) DEBUG Using proactor: IocpProactor
+2023-12-29 18:28:53,671 chess.engine (engine.py:1040) DEBUG <UciProtocol (pid=2952)>: Connection made
+2023-12-29 18:28:53,671 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << uci
+2023-12-29 18:28:53,852 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> uciok
+2023-12-29 18:28:53,853 __mp_main__ (lichess-bot.py:581) DEBUG The engine for game WoBYsIKH has pid=2952
+2023-12-29 18:28:53,853 __mp_main__ (lichess-bot.py:584) INFO +++ https://lichess.org/WoBYsIKH/white Blitz vs codic (1370) (WoBYsIKH)
+2023-12-29 18:28:53,854 conversation (conversation.py:83) INFO *** https://lichess.org/WoBYsIKH/white [player] chessbot1239: Hi! I'm a chess-bot. I wish you good luck with the game.
+2023-12-29 18:28:53,855 urllib3.connectionpool (connectionpool.py:1052) DEBUG Starting new HTTPS connection (2): lichess.org:443
+2023-12-29 18:28:54,535 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/chat HTTP/1.1" 200 11
+2023-12-29 18:28:54,537 conversation (conversation.py:83) INFO *** https://lichess.org/WoBYsIKH/white [spectator] chessbot1239: Hi! I'm chessbot1239. Type !help for a list of commands I can respond to.
+2023-12-29 18:28:54,752 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/chat HTTP/1.1" 200 11
+2023-12-29 18:28:54,754 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:28:54,754 __mp_main__ (lichess-bot.py:692) INFO move: 1
+2023-12-29 18:28:54,754 engine_wrapper (engine_wrapper.py:652) INFO Searching for time 10 seconds for game WoBYsIKH
+2023-12-29 18:28:54,755 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << ucinewgame
+2023-12-29 18:28:54,755 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << isready
+2023-12-29 18:28:54,791 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> readyok
+2023-12-29 18:28:54,791 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos
+2023-12-29 18:28:54,792 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go movetime 10000
+2023-12-29 18:28:54,811 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:28:54,812 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:28:54,828 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove e2e3
+2023-12-29 18:28:54,828 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:28:55,132 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/e2e3?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:28:55,133 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'chatLine', 'room': 'player', 'username': 'chessbot1239', 'text': "Hi! I'm a [redacted] I wish you good luck with the game."}
+2023-12-29 18:28:55,134 conversation (conversation.py:42) INFO *** https://lichess.org/WoBYsIKH/white [player] chessbot1239: Hi! I'm a [redacted] I wish you good luck with the game.
+2023-12-29 18:28:55,134 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'chatLine', 'room': 'spectator', 'username': 'chessbot1239', 'text': "Hi! I'm chessbot1239. Type !help for a list of commands I can respond to."}
+2023-12-29 18:28:55,135 conversation (conversation.py:42) INFO *** https://lichess.org/WoBYsIKH/white [spectator] chessbot1239: Hi! I'm chessbot1239. Type !help for a list of commands I can respond to.
+2023-12-29 18:28:55,136 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3', 'wtime': 300000, 'btime': 300000, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:01,712 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5', 'wtime': 300000, 'btime': 300000, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:01,713 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:01,714 __mp_main__ (lichess-bot.py:692) INFO move: 2
+2023-12-29 18:29:01,715 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 297999 btime 300000 for game WoBYsIKH
+2023-12-29 18:29:01,717 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5
+2023-12-29 18:29:01,718 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 297999 btime 300000 winc 0 binc 0
+2023-12-29 18:29:01,725 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:01,726 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:01,749 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove d1g4
+2023-12-29 18:29:01,749 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:01,965 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/d1g4?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:01,966 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4', 'wtime': 299750, 'btime': 300000, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:04,067 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6', 'wtime': 299750, 'btime': 297990, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:04,068 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:04,069 __mp_main__ (lichess-bot.py:692) INFO move: 3
+2023-12-29 18:29:04,069 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 297749 btime 297990 for game WoBYsIKH
+2023-12-29 18:29:04,071 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6
+2023-12-29 18:29:04,072 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 297749 btime 297990 winc 0 binc 0
+2023-12-29 18:29:04,073 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:04,073 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:04,137 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove g4g5
+2023-12-29 18:29:04,138 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:04,346 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/g4g5?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:04,347 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5', 'wtime': 299470, 'btime': 297990, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:07,084 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6', 'wtime': 299470, 'btime': 295330, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:07,085 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:07,085 __mp_main__ (lichess-bot.py:692) INFO move: 4
+2023-12-29 18:29:07,086 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 297469 btime 295330 for game WoBYsIKH
+2023-12-29 18:29:07,087 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6
+2023-12-29 18:29:07,088 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 297469 btime 295330 winc 0 binc 0
+2023-12-29 18:29:07,088 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:07,089 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:07,102 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove g5e5
+2023-12-29 18:29:07,103 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:07,320 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/g5e5?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:07,321 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5', 'wtime': 299240, 'btime': 295330, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:08,904 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7', 'wtime': 299240, 'btime': 293820, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:08,905 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:08,906 __mp_main__ (lichess-bot.py:692) INFO move: 5
+2023-12-29 18:29:08,906 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 297239 btime 293820 for game WoBYsIKH
+2023-12-29 18:29:08,907 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7
+2023-12-29 18:29:08,908 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 297239 btime 293820 winc 0 binc 0
+2023-12-29 18:29:08,908 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:08,909 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:08,947 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove e5d4
+2023-12-29 18:29:08,948 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:09,189 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/e5d4?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:09,190 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4', 'wtime': 298960, 'btime': 293820, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:10,234 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6', 'wtime': 298960, 'btime': 292850, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:10,234 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:10,235 __mp_main__ (lichess-bot.py:692) INFO move: 6
+2023-12-29 18:29:10,235 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 296959 btime 292850 for game WoBYsIKH
+2023-12-29 18:29:10,236 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6
+2023-12-29 18:29:10,236 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 296959 btime 292850 winc 0 binc 0
+2023-12-29 18:29:10,236 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:10,236 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:10,281 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove d4f4
+2023-12-29 18:29:10,282 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:10,483 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/d4f4?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:10,484 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4', 'wtime': 298700, 'btime': 292850, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:11,839 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5', 'wtime': 298700, 'btime': 291580, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:11,839 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:11,840 __mp_main__ (lichess-bot.py:692) INFO move: 7
+2023-12-29 18:29:11,840 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 296699 btime 291580 for game WoBYsIKH
+2023-12-29 18:29:11,842 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5
+2023-12-29 18:29:11,842 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 296699 btime 291580 winc 0 binc 0
+2023-12-29 18:29:11,843 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:11,843 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:11,881 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove b1c3
+2023-12-29 18:29:11,882 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:12,104 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/b1c3?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:12,105 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3', 'wtime': 298430, 'btime': 291580, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:13,492 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6', 'wtime': 298430, 'btime': 290280, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:13,492 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:13,492 __mp_main__ (lichess-bot.py:692) INFO move: 8
+2023-12-29 18:29:13,493 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 296429 btime 290280 for game WoBYsIKH
+2023-12-29 18:29:13,493 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6
+2023-12-29 18:29:13,494 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 296429 btime 290280 winc 0 binc 0
+2023-12-29 18:29:13,494 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:13,494 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:13,548 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove f1d3
+2023-12-29 18:29:13,549 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:13,795 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/f1d3?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:13,796 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3', 'wtime': 298130, 'btime': 290280, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:16,801 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7', 'wtime': 298130, 'btime': 287360, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:16,802 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:16,803 __mp_main__ (lichess-bot.py:692) INFO move: 9
+2023-12-29 18:29:16,803 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 296129 btime 287360 for game WoBYsIKH
+2023-12-29 18:29:16,804 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7
+2023-12-29 18:29:16,804 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 296129 btime 287360 winc 0 binc 0
+2023-12-29 18:29:16,804 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:16,805 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:16,874 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove g1f3
+2023-12-29 18:29:16,875 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:17,278 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/g1f3?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:17,278 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3', 'wtime': 297840, 'btime': 287360, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:18,462 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8', 'wtime': 297840, 'btime': 286330, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:18,463 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:18,463 __mp_main__ (lichess-bot.py:692) INFO move: 10
+2023-12-29 18:29:18,464 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 295839 btime 286330 for game WoBYsIKH
+2023-12-29 18:29:18,464 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8
+2023-12-29 18:29:18,465 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 295839 btime 286330 winc 0 binc 0
+2023-12-29 18:29:18,465 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:18,465 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:18,545 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove b2b3
+2023-12-29 18:29:18,545 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:18,754 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/b2b3?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:18,754 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3', 'wtime': 297550, 'btime': 286330, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:21,533 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4', 'wtime': 297550, 'btime': 283620, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:21,535 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:21,536 __mp_main__ (lichess-bot.py:692) INFO move: 11
+2023-12-29 18:29:21,537 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 295549 btime 283620 for game WoBYsIKH
+2023-12-29 18:29:21,538 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4
+2023-12-29 18:29:21,538 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 295549 btime 283620 winc 0 binc 0
+2023-12-29 18:29:21,539 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:21,539 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:21,720 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove c3a4
+2023-12-29 18:29:21,721 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:21,935 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/c3a4?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:21,937 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4', 'wtime': 297150, 'btime': 283620, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:22,973 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5', 'wtime': 297150, 'btime': 282680, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:22,976 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:22,976 __mp_main__ (lichess-bot.py:692) INFO move: 12
+2023-12-29 18:29:22,976 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 295149 btime 282680 for game WoBYsIKH
+2023-12-29 18:29:22,977 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5
+2023-12-29 18:29:22,978 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 295149 btime 282680 winc 0 binc 0
+2023-12-29 18:29:22,979 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:22,979 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:23,119 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove f4g3
+2023-12-29 18:29:23,120 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:23,344 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/f4g3?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:23,345 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3', 'wtime': 296780, 'btime': 282680, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:29,390 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4', 'wtime': 296780, 'btime': 276720, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:29,391 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:29,392 __mp_main__ (lichess-bot.py:692) INFO move: 13
+2023-12-29 18:29:29,392 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 294779 btime 276720 for game WoBYsIKH
+2023-12-29 18:29:29,392 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4
+2023-12-29 18:29:29,393 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 294779 btime 276720 winc 0 binc 0
+2023-12-29 18:29:29,393 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:29,393 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:29,523 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove a4b2
+2023-12-29 18:29:29,524 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:29,743 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/a4b2?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:29,745 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2', 'wtime': 296420, 'btime': 276720, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:32,944 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6', 'wtime': 296420, 'btime': 273600, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:32,946 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:32,947 __mp_main__ (lichess-bot.py:692) INFO move: 14
+2023-12-29 18:29:32,947 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 294419 btime 273600 for game WoBYsIKH
+2023-12-29 18:29:32,948 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6
+2023-12-29 18:29:32,949 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 294419 btime 273600 winc 0 binc 0
+2023-12-29 18:29:32,949 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:32,949 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:33,054 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove g3g7
+2023-12-29 18:29:33,055 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:33,279 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/g3g7?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:33,281 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7', 'wtime': 296080, 'btime': 273600, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:35,191 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8', 'wtime': 296080, 'btime': 271770, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:35,192 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:35,192 __mp_main__ (lichess-bot.py:692) INFO move: 15
+2023-12-29 18:29:35,192 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 294080 btime 271770 for game WoBYsIKH
+2023-12-29 18:29:35,193 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8
+2023-12-29 18:29:35,193 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 294080 btime 271770 winc 0 binc 0
+2023-12-29 18:29:35,194 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:35,194 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:35,295 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove g7d4
+2023-12-29 18:29:35,296 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:35,523 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/g7d4?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:35,524 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4', 'wtime': 295740, 'btime': 271770, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:37,552 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2', 'wtime': 295740, 'btime': 269880, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:37,554 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:37,554 __mp_main__ (lichess-bot.py:692) INFO move: 16
+2023-12-29 18:29:37,555 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 293739 btime 269880 for game WoBYsIKH
+2023-12-29 18:29:37,556 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2
+2023-12-29 18:29:37,556 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 293739 btime 269880 winc 0 binc 0
+2023-12-29 18:29:37,557 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:37,557 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:37,684 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove h2h4
+2023-12-29 18:29:37,685 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:37,892 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/h2h4?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:37,893 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4', 'wtime': 295400, 'btime': 269880, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:39,461 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4', 'wtime': 295400, 'btime': 268400, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:39,463 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:39,463 __mp_main__ (lichess-bot.py:692) INFO move: 17
+2023-12-29 18:29:39,463 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 293399 btime 268400 for game WoBYsIKH
+2023-12-29 18:29:39,464 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4
+2023-12-29 18:29:39,464 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 293399 btime 268400 winc 0 binc 0
+2023-12-29 18:29:39,465 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:39,465 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:39,588 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove f3g5
+2023-12-29 18:29:39,588 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:39,812 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/f3g5?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:39,813 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5', 'wtime': 295050, 'btime': 268400, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:42,496 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5', 'wtime': 295050, 'btime': 265790, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:42,497 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:42,497 __mp_main__ (lichess-bot.py:692) INFO move: 18
+2023-12-29 18:29:42,497 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 293049 btime 265790 for game WoBYsIKH
+2023-12-29 18:29:42,498 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5
+2023-12-29 18:29:42,498 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 293049 btime 265790 winc 0 binc 0
+2023-12-29 18:29:42,499 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:42,499 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:42,615 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove d3e4
+2023-12-29 18:29:42,616 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:42,845 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/d3e4?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:42,846 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4', 'wtime': 294710, 'btime': 265790, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:53,813 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7', 'wtime': 294710, 'btime': 254880, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:53,815 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:53,815 __mp_main__ (lichess-bot.py:692) INFO move: 19
+2023-12-29 18:29:53,815 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 292709 btime 254880 for game WoBYsIKH
+2023-12-29 18:29:53,816 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7
+2023-12-29 18:29:53,816 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 292709 btime 254880 winc 0 binc 0
+2023-12-29 18:29:53,817 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:53,817 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:53,878 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove e4g2
+2023-12-29 18:29:53,879 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:53,881 urllib3.connectionpool (connectionpool.py:292) DEBUG Resetting dropped connection: lichess.org
+2023-12-29 18:29:54,853 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/e4g2?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:54,854 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2', 'wtime': 293680, 'btime': 254880, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:58,213 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3', 'wtime': 293680, 'btime': 251580, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:29:58,215 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:29:58,215 __mp_main__ (lichess-bot.py:692) INFO move: 20
+2023-12-29 18:29:58,215 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 291679 btime 251580 for game WoBYsIKH
+2023-12-29 18:29:58,216 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3
+2023-12-29 18:29:58,217 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 291679 btime 251580 winc 0 binc 0
+2023-12-29 18:29:58,218 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:29:58,218 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:29:58,283 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove g2b7
+2023-12-29 18:29:58,284 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:29:58,510 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/g2b7?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:29:58,512 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7', 'wtime': 293390, 'btime': 251580, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:21,248 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7', 'wtime': 293390, 'btime': 228890, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:21,251 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:30:21,252 __mp_main__ (lichess-bot.py:692) INFO move: 21
+2023-12-29 18:30:21,252 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 291389 btime 228890 for game WoBYsIKH
+2023-12-29 18:30:21,252 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7
+2023-12-29 18:30:21,253 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 291389 btime 228890 winc 0 binc 0
+2023-12-29 18:30:21,253 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:30:21,253 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:30:21,289 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove d4e4
+2023-12-29 18:30:21,289 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:30:21,291 urllib3.connectionpool (connectionpool.py:292) DEBUG Resetting dropped connection: lichess.org
+2023-12-29 18:30:21,986 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/d4e4?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:30:21,987 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4', 'wtime': 292660, 'btime': 228890, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:25,371 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5', 'wtime': 292660, 'btime': 225580, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:25,375 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:30:25,375 __mp_main__ (lichess-bot.py:692) INFO move: 22
+2023-12-29 18:30:25,375 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 290659 btime 225580 for game WoBYsIKH
+2023-12-29 18:30:25,376 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5
+2023-12-29 18:30:25,376 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 290659 btime 225580 winc 0 binc 0
+2023-12-29 18:30:25,377 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:30:25,377 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:30:25,489 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove e1g1
+2023-12-29 18:30:25,489 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:30:25,709 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/e1g1?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:30:25,710 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1', 'wtime': 292330, 'btime': 225580, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:28,169 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5', 'wtime': 292330, 'btime': 223230, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:28,172 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:30:28,172 __mp_main__ (lichess-bot.py:692) INFO move: 23
+2023-12-29 18:30:28,173 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 290329 btime 223230 for game WoBYsIKH
+2023-12-29 18:30:28,174 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5
+2023-12-29 18:30:28,175 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 290329 btime 223230 winc 0 binc 0
+2023-12-29 18:30:28,175 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:30:28,175 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:30:28,270 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove e4e5
+2023-12-29 18:30:28,271 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:30:28,485 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/e4e5?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:30:28,486 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5', 'wtime': 292010, 'btime': 223230, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:41,843 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4', 'wtime': 292010, 'btime': 210010, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:41,846 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:30:41,846 __mp_main__ (lichess-bot.py:692) INFO move: 24
+2023-12-29 18:30:41,847 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 290009 btime 210010 for game WoBYsIKH
+2023-12-29 18:30:41,848 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4
+2023-12-29 18:30:41,848 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 290009 btime 210010 winc 0 binc 0
+2023-12-29 18:30:41,849 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:30:41,849 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:30:41,932 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove g1h2
+2023-12-29 18:30:41,932 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:30:41,933 urllib3.connectionpool (connectionpool.py:292) DEBUG Resetting dropped connection: lichess.org
+2023-12-29 18:30:42,847 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/g1h2?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:30:42,848 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2', 'wtime': 291010, 'btime': 210010, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:53,305 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3', 'wtime': 291010, 'btime': 199640, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:53,307 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:30:53,307 __mp_main__ (lichess-bot.py:692) INFO move: 25
+2023-12-29 18:30:53,307 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 289009 btime 199640 for game WoBYsIKH
+2023-12-29 18:30:53,308 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3
+2023-12-29 18:30:53,308 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 289009 btime 199640 winc 0 binc 0
+2023-12-29 18:30:53,309 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:30:53,309 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:30:53,412 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove c2d3
+2023-12-29 18:30:53,413 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:30:53,415 urllib3.connectionpool (connectionpool.py:292) DEBUG Resetting dropped connection: lichess.org
+2023-12-29 18:30:54,398 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/c2d3?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:30:54,399 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3', 'wtime': 289930, 'btime': 199640, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:56,024 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6', 'wtime': 289930, 'btime': 198070, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:56,028 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:30:56,028 __mp_main__ (lichess-bot.py:692) INFO move: 26
+2023-12-29 18:30:56,029 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 287929 btime 198070 for game WoBYsIKH
+2023-12-29 18:30:56,030 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6
+2023-12-29 18:30:56,030 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 287929 btime 198070 winc 0 binc 0
+2023-12-29 18:30:56,031 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:30:56,031 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:30:56,070 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove a2a3
+2023-12-29 18:30:56,071 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:30:56,278 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/a2a3?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:30:56,279 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3', 'wtime': 289680, 'btime': 198070, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:57,498 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5', 'wtime': 289680, 'btime': 196950, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:30:57,503 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:30:57,503 __mp_main__ (lichess-bot.py:692) INFO move: 27
+2023-12-29 18:30:57,503 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 287679 btime 196950 for game WoBYsIKH
+2023-12-29 18:30:57,505 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5
+2023-12-29 18:30:57,505 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 287679 btime 196950 winc 0 binc 0
+2023-12-29 18:30:57,506 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:30:57,506 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:30:57,517 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove h2g1
+2023-12-29 18:30:57,518 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:30:57,735 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/h2g1?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:30:57,737 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1', 'wtime': 289450, 'btime': 196950, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:01,454 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3', 'wtime': 289450, 'btime': 193300, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:01,456 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:31:01,456 __mp_main__ (lichess-bot.py:692) INFO move: 28
+2023-12-29 18:31:01,456 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 287450 btime 193300 for game WoBYsIKH
+2023-12-29 18:31:01,457 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3
+2023-12-29 18:31:01,458 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 287450 btime 193300 winc 0 binc 0
+2023-12-29 18:31:01,458 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:31:01,458 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:31:01,491 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove b2d3
+2023-12-29 18:31:01,491 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:31:01,703 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/b2d3?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:31:01,704 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3', 'wtime': 289200, 'btime': 193300, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:02,731 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1', 'wtime': 289200, 'btime': 192380, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:02,734 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:31:02,735 __mp_main__ (lichess-bot.py:692) INFO move: 29
+2023-12-29 18:31:02,735 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 287199 btime 192380 for game WoBYsIKH
+2023-12-29 18:31:02,737 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1
+2023-12-29 18:31:02,737 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 287199 btime 192380 winc 0 binc 0
+2023-12-29 18:31:02,737 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:31:02,737 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:31:02,755 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove d3c5
+2023-12-29 18:31:02,756 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:31:02,975 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/d3c5?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:31:02,977 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5', 'wtime': 288950, 'btime': 192380, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:05,817 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8', 'wtime': 288950, 'btime': 189610, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:05,822 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:31:05,823 __mp_main__ (lichess-bot.py:692) INFO move: 30
+2023-12-29 18:31:05,823 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 286949 btime 189610 for game WoBYsIKH
+2023-12-29 18:31:05,824 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8
+2023-12-29 18:31:05,824 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 286949 btime 189610 winc 0 binc 0
+2023-12-29 18:31:05,825 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:31:05,825 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:31:05,838 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove f1e1
+2023-12-29 18:31:05,838 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:31:06,046 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/f1e1?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:31:06,048 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1', 'wtime': 288720, 'btime': 189610, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:12,201 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1 d7d5', 'wtime': 288720, 'btime': 183530, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:12,203 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:31:12,204 __mp_main__ (lichess-bot.py:692) INFO move: 31
+2023-12-29 18:31:12,204 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 286719 btime 183530 for game WoBYsIKH
+2023-12-29 18:31:12,204 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1 d7d5
+2023-12-29 18:31:12,205 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 286719 btime 183530 winc 0 binc 0
+2023-12-29 18:31:12,205 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:31:12,206 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:31:12,249 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove c5a6
+2023-12-29 18:31:12,250 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:31:12,455 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/c5a6?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:31:12,457 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1 d7d5 c5a6', 'wtime': 288460, 'btime': 183530, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:15,336 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1 d7d5 c5a6 g4h3', 'wtime': 288460, 'btime': 180710, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:15,340 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:31:15,341 __mp_main__ (lichess-bot.py:692) INFO move: 32
+2023-12-29 18:31:15,341 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 286459 btime 180710 for game WoBYsIKH
+2023-12-29 18:31:15,342 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1 d7d5 c5a6 g4h3
+2023-12-29 18:31:15,342 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 286459 btime 180710 winc 0 binc 0
+2023-12-29 18:31:15,344 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:31:15,344 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:31:15,375 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove f2f3
+2023-12-29 18:31:15,375 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:31:15,613 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/f2f3?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:31:15,614 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1 d7d5 c5a6 g4h3 f2f3', 'wtime': 288200, 'btime': 180710, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:17,205 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1 d7d5 c5a6 g4h3 f2f3 d5f3', 'wtime': 288200, 'btime': 179180, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:17,208 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:31:17,208 __mp_main__ (lichess-bot.py:692) INFO move: 33
+2023-12-29 18:31:17,209 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 286199 btime 179180 for game WoBYsIKH
+2023-12-29 18:31:17,209 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1 d7d5 c5a6 g4h3 f2f3 d5f3
+2023-12-29 18:31:17,209 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 286199 btime 179180 winc 0 binc 0
+2023-12-29 18:31:17,211 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:31:17,211 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:31:17,226 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove e1e2
+2023-12-29 18:31:17,226 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:31:17,436 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/e1e2?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:31:17,437 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1 d7d5 c5a6 g4h3 f2f3 d5f3 e1e2', 'wtime': 287970, 'btime': 179180, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:20,544 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1 d7d5 c5a6 g4h3 f2f3 d5f3 e1e2 f3e2', 'wtime': 287970, 'btime': 176130, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:20,546 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:31:20,546 __mp_main__ (lichess-bot.py:692) INFO move: 34
+2023-12-29 18:31:20,546 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 285970 btime 176130 for game WoBYsIKH
+2023-12-29 18:31:20,547 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << position startpos moves e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1 d7d5 c5a6 g4h3 f2f3 d5f3 e1e2 f3e2
+2023-12-29 18:31:20,547 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << go wtime 285970 btime 176130 winc 0 binc 0
+2023-12-29 18:31:20,548 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> 2
+2023-12-29 18:31:20,548 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=2952)>: Unexpected engine output: '2'
+2023-12-29 18:31:20,549 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> bestmove g1h1
+2023-12-29 18:31:20,551 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:31:20,769 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/move/g1h1?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:31:20,770 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1 d7d5 c5a6 g4h3 f2f3 d5f3 e1e2 f3e2 g1h1', 'wtime': 287760, 'btime': 176130, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:31:21,740 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3 e7e5 d1g4 g8f6 g4g5 h7h6 g5e5 f8e7 e5d4 b8c6 d4f4 d7d5 b1c3 c8e6 f1d3 d8d7 g1f3 e8c8 b2b3 d5d4 c3a4 f6d5 f4g3 c6b4 a4b2 e7d6 g3g7 h8g8 g7d4 g8g2 h2h4 e6g4 f3g5 h6g5 d3e4 d6e7 e4g2 d5e3 g2b7 c8b7 d4e4 e3d5 e1g1 f7f5 e4e5 d5f4 g1h2 f4d3 c2d3 e7d6 a2a3 d6e5 h2g1 b4d3 b2d3 e5a1 d3c5 b7c8 f1e1 d7d5 c5a6 g4h3 f2f3 d5f3 e1e2 f3e2 g1h1 e2g2', 'wtime': 287760, 'btime': 175250, 'winc': 0, 'binc': 0, 'status': 'mate', 'winner': 'black'}
+2023-12-29 18:31:21,740 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'gameFinish', 'game': {'fullId': 'WoBYsIKHOmO2', 'gameId': 'WoBYsIKH', 'fen': '2kr4/p1p5/N7/5pp1/7P/PP5b/3P2q1/b1B4K w - - 2 35', 'color': 'white', 'lastMove': 'e2g2', 'source': 'friend', 'status': {'id': 30, 'name': 'mate'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'blitz', 'perf': 'blitz', 'rated': False, 'hasMoved': True, 'opponent': {'id': 'codic', 'username': 'codic', 'rating': 1370}, 'isMyTurn': False, 'secondsLeft': 288, 'winner': 'black', 'compat': {'bot': True, 'board': True}, 'id': 'WoBYsIKH'}}
+2023-12-29 18:31:21,742 __mp_main__ (lichess-bot.py:791) INFO codic won!
+2023-12-29 18:31:21,743 __mp_main__ (lichess-bot.py:802) INFO Game won by checkmate.
+2023-12-29 18:31:21,743 conversation (conversation.py:83) INFO *** https://lichess.org/WoBYsIKH/white [player] chessbot1239: Good game!
+2023-12-29 18:31:21,963 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/chat HTTP/1.1" 200 11
+2023-12-29 18:31:21,964 conversation (conversation.py:83) INFO *** https://lichess.org/WoBYsIKH/white [spectator] chessbot1239: Thanks for watching!
+2023-12-29 18:31:22,177 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WoBYsIKH/chat HTTP/1.1" 200 11
+2023-12-29 18:31:22,178 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << isready
+2023-12-29 18:31:22,179 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=2952)>: >> readyok
+2023-12-29 18:31:22,180 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=2952)>: << quit
+2023-12-29 18:31:22,191 chess.engine (engine.py:1059) DEBUG <UciProtocol (pid=2952)>: Process exited
+2023-12-29 18:31:22,191 chess.engine (engine.py:1046) DEBUG <UciProtocol (pid=2952)>: Connection lost (exit code: 0, error: None)
+2023-12-29 18:31:22,193 __mp_main__ (lichess-bot.py:765) INFO --- https://lichess.org/WoBYsIKH/white Game over
+2023-12-29 18:31:22,194 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'local_game_done', 'game': {'id': 'WoBYsIKH', 'pgn': '', 'complete': True}}
+2023-12-29 18:31:22,195 __main__ (lichess-bot.py:257) INFO +++ Process Freed. Count: 0. IDs: None
+2023-12-29 18:31:28,740 __mp_main__ (lichess-bot.py:68) DEBUG Received SIGINT. Terminating client.

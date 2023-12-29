@@ -1,0 +1,344 @@
+2023-12-29 18:26:19,508 __main__ (lichess-bot.py:1026) INFO 
+    .   _/|
+    .  // o\
+    .  || ._)  lichess-bot 2023.12.28.2
+    .  //__\
+    .  )___(   Play on Lichess with a bot
+    
+2023-12-29 18:26:19,543 config (config.py:261) DEBUG Config:
+token: logger
+url: https://lichess.org/
+engine:
+  dir: ./../Chess-Coding-Adventure/Chess-Coding-Adventure/bin/Debug/net6.0
+  name: Chess-Coding-Adventure.exe
+  working_dir: ''
+  protocol: uci
+  ponder: true
+  polyglot:
+    enabled: false
+    book:
+      standard:
+      - engines/book1.bin
+      - engines/book2.bin
+    min_weight: 1
+    selection: weighted_random
+    max_depth: 20
+  draw_or_resign:
+    resign_enabled: false
+    resign_score: -1000
+    resign_for_egtb_minus_two: true
+    resign_moves: 3
+    offer_draw_enabled: true
+    offer_draw_score: 0
+    offer_draw_for_egtb_zero: true
+    offer_draw_moves: 10
+    offer_draw_pieces: 10
+  online_moves:
+    max_out_of_book_moves: 10
+    max_retries: 2
+    chessdb_book:
+      enabled: false
+      min_time: 20
+      move_quality: good
+      min_depth: 20
+    lichess_cloud_analysis:
+      enabled: false
+      min_time: 20
+      move_quality: best
+      max_score_difference: 50
+      min_depth: 20
+      min_knodes: 0
+    lichess_opening_explorer:
+      enabled: false
+      min_time: 20
+      source: masters
+      player_name: ''
+      sort: winrate
+      min_games: 10
+    online_egtb:
+      enabled: false
+      min_time: 20
+      max_pieces: 7
+      source: lichess
+      move_quality: best
+  lichess_bot_tbs:
+    syzygy:
+      enabled: false
+      paths:
+      - engines/syzygy
+      max_pieces: 7
+      move_quality: best
+    gaviota:
+      enabled: false
+      paths:
+      - engines/gaviota
+      max_pieces: 5
+      min_dtm_to_consider_as_wdl_1: 120
+      move_quality: best
+  homemade_options: null
+  silence_stderr: false
+abort_time: 30
+fake_think_time: false
+rate_limiting_delay: 0
+move_overhead: 2000
+correspondence:
+  move_time: 60
+  checkin_period: 300
+  disconnect_time: 150
+  ponder: false
+challenge:
+  concurrency: 1
+  sort_by: best
+  accept_bot: true
+  only_bot: false
+  max_increment: 20
+  min_increment: 0
+  max_base: 1800
+  min_base: 0
+  max_days: 14
+  min_days: 1
+  variants:
+  - standard
+  time_controls:
+  - bullet
+  - blitz
+  - rapid
+  - classical
+  modes:
+  - casual
+  - rated
+  bullet_requires_increment: false
+greeting:
+  hello: Hi! I'm {me}. Good luck! Type !help for a list of commands I can respond
+    to.
+  goodbye: Good game!
+  hello_spectators: Hi! I'm {me}. Type !help for a list of commands I can respond
+    to.
+  goodbye_spectators: Thanks for watching!
+matchmaking:
+  allow_matchmaking: false
+  challenge_variant: random
+  challenge_timeout: 30
+  challenge_initial_time:
+  - 60
+  - 180
+  challenge_increment:
+  - 1
+  - 2
+  opponent_rating_difference: 300
+  rating_preference: none
+  opponent_allow_tos_violation: false
+  challenge_mode: random
+  challenge_filter: none
+
+2023-12-29 18:26:19,543 config (config.py:262) DEBUG ====================
+2023-12-29 18:26:19,550 config (config.py:261) DEBUG Config:
+token: logger
+url: https://lichess.org/
+engine:
+  dir: ./../Chess-Coding-Adventure/Chess-Coding-Adventure/bin/Debug/net6.0
+  name: Chess-Coding-Adventure.exe
+  working_dir: C:\src\egne projekter\DotNet projects\lichess-bot
+  protocol: uci
+  ponder: true
+  polyglot:
+    enabled: false
+    book:
+      standard:
+      - engines/book1.bin
+      - engines/book2.bin
+    min_weight: 1
+    selection: weighted_random
+    max_depth: 20
+  draw_or_resign:
+    resign_enabled: false
+    resign_score: -1000
+    resign_for_egtb_minus_two: true
+    resign_moves: 3
+    offer_draw_enabled: true
+    offer_draw_score: 0
+    offer_draw_for_egtb_zero: true
+    offer_draw_moves: 10
+    offer_draw_pieces: 10
+  online_moves:
+    max_out_of_book_moves: 10
+    max_retries: 2
+    chessdb_book:
+      enabled: false
+      min_time: 20
+      move_quality: good
+      min_depth: 20
+    lichess_cloud_analysis:
+      enabled: false
+      min_time: 20
+      move_quality: best
+      max_score_difference: 50
+      min_depth: 20
+      min_knodes: 0
+    lichess_opening_explorer:
+      enabled: false
+      min_time: 20
+      source: masters
+      player_name: ''
+      sort: winrate
+      min_games: 10
+    online_egtb:
+      enabled: false
+      min_time: 20
+      max_pieces: 7
+      source: lichess
+      move_quality: best
+    max_depth: .inf
+  lichess_bot_tbs:
+    syzygy:
+      enabled: false
+      paths:
+      - engines/syzygy
+      max_pieces: 7
+      move_quality: best
+    gaviota:
+      enabled: false
+      paths:
+      - engines/gaviota
+      max_pieces: 5
+      min_dtm_to_consider_as_wdl_1: 120
+      move_quality: best
+  homemade_options: null
+  silence_stderr: false
+  uci_ponder: false
+abort_time: 30
+fake_think_time: false
+rate_limiting_delay: 0
+move_overhead: 2000
+correspondence:
+  move_time: 60
+  checkin_period: 300
+  disconnect_time: 150
+  ponder: false
+  uci_ponder: false
+challenge:
+  concurrency: 1
+  sort_by: best
+  accept_bot: true
+  only_bot: false
+  max_increment: 20
+  min_increment: 0
+  max_base: 1800
+  min_base: 0
+  max_days: 14
+  min_days: 1
+  variants:
+  - standard
+  time_controls:
+  - bullet
+  - blitz
+  - rapid
+  - classical
+  modes:
+  - casual
+  - rated
+  bullet_requires_increment: false
+  block_list: []
+  allow_list: []
+greeting:
+  hello: Hi! I'm {me}. Good luck! Type !help for a list of commands I can respond
+    to.
+  goodbye: Good game!
+  hello_spectators: Hi! I'm {me}. Type !help for a list of commands I can respond
+    to.
+  goodbye_spectators: Thanks for watching!
+matchmaking:
+  allow_matchmaking: false
+  challenge_variant: random
+  challenge_timeout: 30
+  challenge_initial_time:
+  - 60
+  - 180
+  challenge_increment:
+  - 1
+  - 2
+  opponent_rating_difference: 300
+  rating_preference: none
+  opponent_allow_tos_violation: false
+  challenge_mode: random
+  challenge_filter: none
+  block_list: []
+  challenge_days:
+  - null
+  opponent_min_rating: 600
+  opponent_max_rating: 4000
+  overrides: {}
+pgn_file_grouping: game
+
+2023-12-29 18:26:19,551 config (config.py:262) DEBUG ====================
+2023-12-29 18:26:19,551 __main__ (lichess-bot.py:1029) INFO Checking engine configuration ...
+2023-12-29 18:26:19,557 engine_wrapper (engine_wrapper.py:67) DEBUG Starting engine: ['C:\\src\\egne projekter\\DotNet projects\\Chess-Coding-Adventure\\Chess-Coding-Adventure\\bin\\Debug\\net6.0\\Chess-Coding-Adventure.exe']
+2023-12-29 18:26:19,557 asyncio (proactor_events.py:630) DEBUG Using proactor: IocpProactor
+2023-12-29 18:26:19,581 chess.engine (engine.py:1040) DEBUG <UciProtocol (pid=24816)>: Connection made
+2023-12-29 18:26:19,581 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=24816)>: << uci
+2023-12-29 18:26:19,745 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=24816)>: >> uciok
+2023-12-29 18:26:19,746 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=24816)>: << isready
+2023-12-29 18:26:19,746 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=24816)>: >> readyok
+2023-12-29 18:26:19,746 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=24816)>: << quit
+2023-12-29 18:26:19,754 chess.engine (engine.py:1059) DEBUG <UciProtocol (pid=24816)>: Process exited
+2023-12-29 18:26:19,754 chess.engine (engine.py:1046) DEBUG <UciProtocol (pid=24816)>: Connection lost (exit code: 0, error: None)
+2023-12-29 18:26:19,754 __main__ (lichess-bot.py:1032) INFO Engine configuration OK
+2023-12-29 18:26:19,761 urllib3.connectionpool (connectionpool.py:1052) DEBUG Starting new HTTPS connection (1): lichess.org:443
+2023-12-29 18:26:20,556 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/token/test HTTP/1.1" 200 None
+2023-12-29 18:26:21,037 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "GET /api/account HTTP/1.1" 200 None
+2023-12-29 18:26:21,037 __main__ (lichess-bot.py:1041) INFO Welcome chessbot1239!
+2023-12-29 18:26:21,039 __main__ (lichess-bot.py:209) INFO You're now connected to https://lichess.org/ and awaiting challenges.
+2023-12-29 18:26:22,132 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "GET /api/account/playing HTTP/1.1" 200 17
+2023-12-29 18:27:01,947 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'challenge', 'challenge': {'id': 'WKVqFsFc', 'url': 'https://lichess.org/WKVqFsFc', 'status': 'created', 'challenger': {'id': 'codic', 'name': 'codic', 'rating': 1370, 'title': None, 'online': True, 'lag': 4}, 'destUser': {'id': 'chessbot1239', 'name': 'chessbot1239', 'rating': 2000, 'title': 'BOT', 'provisional': True, 'online': True}, 'variant': {'key': 'standard', 'name': 'Standard', 'short': 'Std'}, 'rated': False, 'speed': 'blitz', 'timeControl': {'type': 'clock', 'limit': 300, 'increment': 0, 'show': '5+0'}, 'color': 'random', 'finalColor': 'black', 'perf': {'icon': '\ue01d', 'name': 'Blitz'}}, 'compat': {'bot': True, 'board': True}}
+2023-12-29 18:27:01,949 __main__ (lichess-bot.py:424) INFO Accept Blitz casual challenge from codic (1370) (WKVqFsFc)
+2023-12-29 18:27:01,952 urllib3.connectionpool (connectionpool.py:292) DEBUG Resetting dropped connection: lichess.org
+2023-12-29 18:27:02,578 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/challenge/WKVqFsFc/accept HTTP/1.1" 200 11
+2023-12-29 18:27:02,579 __main__ (lichess-bot.py:257) INFO --- Process Queued. Count: 1. IDs: {'WKVqFsFc'}
+2023-12-29 18:27:02,580 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'gameStart', 'game': {'fullId': 'WKVqFsFc7ZQB', 'gameId': 'WKVqFsFc', 'fen': 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1', 'color': 'white', 'lastMove': '', 'source': 'friend', 'status': {'id': 20, 'name': 'started'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'blitz', 'perf': 'blitz', 'rated': False, 'hasMoved': False, 'opponent': {'id': 'codic', 'username': 'codic', 'rating': 1370}, 'isMyTurn': True, 'secondsLeft': 300, 'compat': {'bot': True, 'board': True}, 'id': 'WKVqFsFc'}}
+2023-12-29 18:27:02,580 __main__ (lichess-bot.py:257) INFO --- Process Used. Count: 1. IDs: {'WKVqFsFc'}
+2023-12-29 18:27:02,594 urllib3.connectionpool (connectionpool.py:1052) DEBUG Starting new HTTPS connection (1): lichess.org:443
+2023-12-29 18:27:03,255 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "GET /api/bot/game/stream/WKVqFsFc HTTP/1.1" 200 None
+2023-12-29 18:27:03,256 __mp_main__ (lichess-bot.py:575) DEBUG Initial state: {'id': 'WKVqFsFc', 'variant': {'key': 'standard', 'name': 'Standard', 'short': 'Std'}, 'speed': 'blitz', 'perf': {'name': 'Blitz'}, 'rated': False, 'createdAt': 1703870822701, 'white': {'id': 'chessbot1239', 'name': 'chessbot1239', 'title': 'BOT', 'rating': 2000, 'provisional': True}, 'black': {'id': 'codic', 'name': 'codic', 'title': None, 'rating': 1370}, 'initialFen': 'startpos', 'clock': {'initial': 300000, 'increment': 0}, 'type': 'gameFull', 'state': {'type': 'gameState', 'moves': '', 'wtime': 300000, 'btime': 300000, 'winc': 0, 'binc': 0, 'status': 'started'}}
+2023-12-29 18:27:03,256 engine_wrapper (engine_wrapper.py:67) DEBUG Starting engine: ['C:\\src\\egne projekter\\DotNet projects\\Chess-Coding-Adventure\\Chess-Coding-Adventure\\bin\\Debug\\net6.0\\Chess-Coding-Adventure.exe']
+2023-12-29 18:27:03,257 asyncio (proactor_events.py:630) DEBUG Using proactor: IocpProactor
+2023-12-29 18:27:03,279 chess.engine (engine.py:1040) DEBUG <UciProtocol (pid=20936)>: Connection made
+2023-12-29 18:27:03,279 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=20936)>: << uci
+2023-12-29 18:27:03,440 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=20936)>: >> uciok
+2023-12-29 18:27:03,442 __mp_main__ (lichess-bot.py:581) DEBUG The engine for game WKVqFsFc has pid=20936
+2023-12-29 18:27:03,442 __mp_main__ (lichess-bot.py:584) INFO +++ https://lichess.org/WKVqFsFc/white Blitz vs codic (1370) (WKVqFsFc)
+2023-12-29 18:27:03,442 conversation (conversation.py:83) INFO *** https://lichess.org/WKVqFsFc/white [player] chessbot1239: Hi! I'm chessbot1239. Good luck! Type !help for a list of commands I can respond to.
+2023-12-29 18:27:03,444 urllib3.connectionpool (connectionpool.py:1052) DEBUG Starting new HTTPS connection (2): lichess.org:443
+2023-12-29 18:27:04,442 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WKVqFsFc/chat HTTP/1.1" 200 11
+2023-12-29 18:27:04,443 conversation (conversation.py:83) INFO *** https://lichess.org/WKVqFsFc/white [spectator] chessbot1239: Hi! I'm chessbot1239. Type !help for a list of commands I can respond to.
+2023-12-29 18:27:04,642 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WKVqFsFc/chat HTTP/1.1" 200 11
+2023-12-29 18:27:04,642 __mp_main__ (lichess-bot.py:691) INFO 
+2023-12-29 18:27:04,643 __mp_main__ (lichess-bot.py:692) INFO move: 1
+2023-12-29 18:27:04,643 engine_wrapper (engine_wrapper.py:652) INFO Searching for time 10 seconds for game WKVqFsFc
+2023-12-29 18:27:04,644 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=20936)>: << ucinewgame
+2023-12-29 18:27:04,644 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=20936)>: << isready
+2023-12-29 18:27:04,683 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=20936)>: >> readyok
+2023-12-29 18:27:04,684 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=20936)>: << position startpos
+2023-12-29 18:27:04,684 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=20936)>: << go movetime 10000
+2023-12-29 18:27:04,704 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=20936)>: >> 2
+2023-12-29 18:27:04,705 chess.engine (engine.py:1730) WARNING <UciProtocol (pid=20936)>: Unexpected engine output: '2'
+2023-12-29 18:27:04,727 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=20936)>: >> bestmove e2e3
+2023-12-29 18:27:04,728 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2023-12-29 18:27:04,938 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WKVqFsFc/move/e2e3?offeringDraw=false HTTP/1.1" 200 11
+2023-12-29 18:27:04,940 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'chatLine', 'room': 'player', 'username': 'chessbot1239', 'text': "Hi! I'm chessbot1239. Good luck! Type !help for a list of commands I can respond to."}
+2023-12-29 18:27:04,940 conversation (conversation.py:42) INFO *** https://lichess.org/WKVqFsFc/white [player] chessbot1239: Hi! I'm chessbot1239. Good luck! Type !help for a list of commands I can respond to.
+2023-12-29 18:27:04,941 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'chatLine', 'room': 'spectator', 'username': 'chessbot1239', 'text': "Hi! I'm chessbot1239. Type !help for a list of commands I can respond to."}
+2023-12-29 18:27:04,941 conversation (conversation.py:42) INFO *** https://lichess.org/WKVqFsFc/white [spectator] chessbot1239: Hi! I'm chessbot1239. Type !help for a list of commands I can respond to.
+2023-12-29 18:27:04,941 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e3', 'wtime': 300000, 'btime': 300000, 'winc': 0, 'binc': 0, 'status': 'started'}
+2023-12-29 18:27:39,345 __mp_main__ (lichess-bot.py:742) INFO Aborting https://lichess.org/WKVqFsFc/white by lack of activity
+2023-12-29 18:27:39,347 urllib3.connectionpool (connectionpool.py:292) DEBUG Resetting dropped connection: lichess.org
+2023-12-29 18:27:40,047 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/WKVqFsFc/abort HTTP/1.1" 200 11
+2023-12-29 18:27:40,047 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'gameFinish', 'game': {'fullId': 'WKVqFsFc7ZQB', 'gameId': 'WKVqFsFc', 'fen': 'rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1', 'color': 'white', 'lastMove': 'e2e3', 'source': 'friend', 'status': {'id': 25, 'name': 'aborted'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'blitz', 'perf': 'blitz', 'rated': False, 'hasMoved': True, 'opponent': {'id': 'codic', 'username': 'codic', 'rating': 1370}, 'isMyTurn': False, 'secondsLeft': 300, 'compat': {'bot': True, 'board': True}, 'id': 'WKVqFsFc'}}
+2023-12-29 18:27:40,047 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=20936)>: << isready
+2023-12-29 18:27:40,048 chess.engine (engine.py:1088) DEBUG <UciProtocol (pid=20936)>: >> readyok
+2023-12-29 18:27:40,049 chess.engine (engine.py:1062) DEBUG <UciProtocol (pid=20936)>: << quit
+2023-12-29 18:27:40,060 chess.engine (engine.py:1059) DEBUG <UciProtocol (pid=20936)>: Process exited
+2023-12-29 18:27:40,061 chess.engine (engine.py:1046) DEBUG <UciProtocol (pid=20936)>: Connection lost (exit code: 0, error: None)
+2023-12-29 18:27:40,061 __mp_main__ (lichess-bot.py:765) INFO --- https://lichess.org/WKVqFsFc/white Game over
+2023-12-29 18:27:40,062 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'local_game_done', 'game': {'id': 'WKVqFsFc', 'pgn': '', 'complete': False}}
+2023-12-29 18:27:40,062 __main__ (lichess-bot.py:257) INFO +++ Process Freed. Count: 0. IDs: None
+2023-12-29 18:28:23,265 __mp_main__ (lichess-bot.py:68) DEBUG Received SIGINT. Terminating client.
